@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization</title>
+    <style>
+        .left,.right{
+            height:100vh;
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+            margin:0;
+        }
+        .left{
+            width: 40%;
+            float:left;
+            
+        }
+        .right{
+            background-color:rgb(33, 184, 159);
+            width: 60%;
+            
+            float:right;
+        }
+        .left form{
+            width:300px;
+            padding:20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 00 5px rgb(205, 239, 233);
+        }
+        .left label{
+            display:flex;
+            padding:8px;
+            font-size: 17px;
+        }
+        input,select{
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button{
+            background-color:  rgb(235, 157, 13);
+            color: #fff; 
+            font-size: 16px;
+            padding: 12px 20px;
+            margin: 6px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover{
+            opacity:0.8;
+        }
+        .right img{
+            width:100%;
+            max-width: 650px;
+            margin-left: 50px;
+            height:auto;
+            
+            }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="left" >
+            <form action="">
+                
+                <label for="">Select a Material:</label>
+                <select name="" id="material" required>
+                    <option value="Coal">Coal</option>
+                    <option value="Iron">Iron</option>
+                    <option value="Carbon">Carbon</option>
+                    <option value="Hydrogen">Hydrogen</option>
+                    <option value="Nytrogen">Nytrogen</option>
+                    <option value="All">All</option>
+                </select>
+                <label>Select a year</label>
+                <select name="year" id="year">
+                    <option value="0">Year</option>
+                    <option value="1">2021</option>
+                    <option value="2">2022</option>
+                    <option value="3">2023</option>
+                    <option value="4">2024</option>
+                    
+                </select>
+                <button id="allYear">Visualize</button>
+                <label for="month1">Select first Month</label>
+                <select id="mon1">
+                    <option value="Month1" >Month1</option>
+                <option name="January" value="Jan">January</option>
+                <option value="Feb">Febraury</option>
+                <option value="Mar">March</option>
+                <option value="Apr">April</option>
+                <option value="May">May</option>
+                <option value="Jun">June</option>
+                <option value="Jul">July</option>
+                <option value="Aug">August</option>
+                <option value="Sep">September</option>
+                <option value="Oct">October</option>
+                <option value="Nov">November</option>
+                <option value="DEc">December</option>
+        </select>    
+                <label for="month2" >Select second Month</label>
+                <select id="mon2">
+                    <option value="Month2">Month2</option>
+                <option name="January" value="Jan">January</option>
+                <option value="Feb">Febraury</option>
+                <option value="Mar">March</option>
+                <option value="Apr">April</option>
+                <option value="May">May</option>
+                <option value="Jun">June</option>
+                <option value="Jul">July</option>
+                <option value="Aug">August</option>
+                <option value="Sep">September</option>
+                <option value="Oct">October</option>
+                <option value="Nov">November</option>
+                <option value="Dec">December</option>
+                </select>
+                <button id="twoMonths">Compare</button>
+                
+                <button id="clear" type="reset">Clear</button>
+            </form>
+        </div>
+            <div class="right">
+                <img src="" alt="" id="targetImage">
+            </div>
+    </div>
+    <script src="scr.js"></script>
+</body>
+</html>
